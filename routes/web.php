@@ -23,9 +23,12 @@ Route::controller(NewsController::class)->prefix('admin')->group(function() {
 }); 
 
 
-//下記からは課題対応
+/*下記からは課題対応
 
 Route::get(XXX, 'AAAcontroller@bbb');
+
+*/
+
 
 Route::get("admin/profile/create", "profilecontroller@add");
 Route::get("admin/profile/create", "profilecontroller@edit");

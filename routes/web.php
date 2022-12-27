@@ -28,11 +28,20 @@ Route::controller(NewsController::class)->prefix('admin')->group(function() {
 Route::get(XXX, 'AAAcontroller@bbb');
 
 */
+use App\Http\Controllers\Admin\ProfileController;
+Route::controller(ProfileController::class)->prefix('admin')->group(function() {
+    Route::get('profile/create', 'add');
+    Route::get('profile/edit', 'edit');
+}); 
+
+/*
+Route::get("admin/profile/create", "ProfileController@add");
+Route::get("admin/profile/create", "ProfileController@edit");
+*/
 
 
-Route::get("admin/profile/create", "profilecontroller@add");
-Route::get("admin/profile/create", "profilecontroller@edit");
 
 
+Auth::routes();
 
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

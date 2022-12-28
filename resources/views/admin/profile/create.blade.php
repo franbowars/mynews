@@ -5,7 +5,7 @@
       
       @section('content')
            <div class="container">
-             <div clas="row">
+             <div class="row">
                <div class="col-md-8 mx-auto">
                  <h2>My プロフィール</h2>
                  

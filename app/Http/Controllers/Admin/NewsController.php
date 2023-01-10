@@ -12,7 +12,7 @@ class NewsController extends Controller
         return view('admin.news.create');
     }
     
-    public function create(Reqest $reqest){
+    public function create(Request $request){
         $this->validate($request, News::$rules);
         
         $news = new News;
@@ -27,7 +27,7 @@ class NewsController extends Controller
         // フォームから送信されてきた_tokenを削除する
         unset($form['_token']);
         // フォームから送信されてきたimageを削除する
-        unset($form['_image']);
+        unset($form['image']);
         
         // データベースに保存する
         $news->fill($form);

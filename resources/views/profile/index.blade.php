@@ -12,7 +12,7 @@
                                 <div class="title">
                                     <p>名前</p>
                                     <h2>{{ Str::limit($headline->name, 70) }}</h2>
-                                    <p>性別</p>
+                                    <p></p>
                                     <p>{{ Str::limit($headline->gender, 70) }}</p>
                                 </div>
                                 {{--<div class="title">
@@ -24,7 +24,7 @@
                             <p class="body mx-auto"> 趣味 </p>
                             <p class="body mx-auto">{{ Str::limit($headline->hobby, 650) }}</p>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-10">
                             <p class="body mx-auto">自己紹介</p>
                             <p class="body mx-auto">{{ Str::limit($headline->introduction, 650) }}</p>
                         </div>
